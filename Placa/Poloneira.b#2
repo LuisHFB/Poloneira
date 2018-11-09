@@ -1016,8 +1016,8 @@ design rules under a new name.</description>
 <element name="X4" library="con-phoenix-508" library_urn="urn:adsk.eagle:library:176" package="MKDSN1,5/2-5,08" package3d_urn="urn:adsk.eagle:package:9630/1" value="MKDSN1,5/2-5,08" x="19.685" y="4.445" rot="R180"/>
 <element name="X1" library="con-phoenix-508" library_urn="urn:adsk.eagle:library:176" package="MKDSN1,5/4-5,08" package3d_urn="urn:adsk.eagle:package:9636/1" value="MKDSN1,5/4-5,08" x="107.95" y="20.32" rot="R270"/>
 <element name="B2" library="SparkFun-Boards" package="UNO_R3_SHIELD_NOLABELS" value="ARDUINO_UNO_R3_SHIELDNOLABELS" x="40.64" y="26.67" rot="R270"/>
-<element name="X6" library="con-phoenix-508" library_urn="urn:adsk.eagle:library:176" package="MKDSN1,5/10-5,08" package3d_urn="urn:adsk.eagle:package:9640/1" value="MKDSN1,5/10-5,08" x="28.448" y="25.273" rot="R180"/>
-<element name="X7" library="con-phoenix-508" library_urn="urn:adsk.eagle:library:176" package="MKDSN1,5/4-5,08" package3d_urn="urn:adsk.eagle:package:9636/1" value="MKDSN1,5/4-5,08" x="64.008" y="25.273" rot="R180"/>
+<element name="X6" library="con-phoenix-508" library_urn="urn:adsk.eagle:library:176" package="MKDSN1,5/10-5,08" package3d_urn="urn:adsk.eagle:package:9640/1" value="MKDSN1,5/10-5,08" x="28.448" y="22.352" rot="R180"/>
+<element name="X7" library="con-phoenix-508" library_urn="urn:adsk.eagle:library:176" package="MKDSN1,5/4-5,08" package3d_urn="urn:adsk.eagle:package:9636/1" value="MKDSN1,5/4-5,08" x="64.008" y="22.352" rot="R180"/>
 </elements>
 <signals>
 <signal name="GND">
@@ -1065,6 +1065,8 @@ design rules under a new name.</description>
 <contactref element="R84" pad="P$1"/>
 <contactref element="R86" pad="P$1"/>
 <contactref element="R88" pad="P$1"/>
+<wire x1="99.06" y1="35.56" x2="100.9861" y2="37.4861" width="1.016" layer="16"/>
+<wire x1="100.9861" y1="37.4861" x2="100.9861" y2="46.33" width="1.016" layer="16"/>
 <wire x1="101.6" y1="32.385" x2="108.839" y2="32.385" width="1.016" layer="16"/>
 <wire x1="108.839" y1="32.385" x2="111.252" y2="29.972" width="1.016" layer="16"/>
 <wire x1="111.252" y1="29.972" x2="111.252" y2="20.32" width="1.016" layer="16"/>
@@ -1073,11 +1075,8 @@ design rules under a new name.</description>
 <wire x1="109.728" y1="15.24" x2="101.6" y2="15.24" width="1.016" layer="16"/>
 <wire x1="99.06" y1="23.495" x2="102.235" y2="20.32" width="1.016" layer="16"/>
 <wire x1="102.235" y1="20.32" x2="111.252" y2="20.32" width="1.016" layer="16"/>
-<wire x1="100.9861" y1="32.9989" x2="101.6" y2="32.385" width="1.016" layer="16"/>
-<wire x1="100.9861" y1="46.33" x2="100.9861" y2="35.687" width="1.016" layer="16"/>
-<wire x1="100.9861" y1="35.687" x2="100.9861" y2="32.9989" width="1.016" layer="16"/>
-<wire x1="99.06" y1="35.56" x2="100.8591" y2="35.56" width="1.016" layer="16"/>
-<wire x1="100.8591" y1="35.56" x2="100.9861" y2="35.687" width="1.016" layer="16"/>
+<wire x1="99.06" y1="35.56" x2="101.6" y2="33.02" width="1.016" layer="16"/>
+<wire x1="101.6" y1="33.02" x2="101.6" y2="32.385" width="1.016" layer="16"/>
 </signal>
 <signal name="+5V">
 <contactref element="X4" pad="1"/>
@@ -1098,8 +1097,8 @@ design rules under a new name.</description>
 <signal name="SENSB_24V">
 <contactref element="R9" pad="P$1"/>
 <contactref element="X7" pad="1"/>
-<wire x1="71.6491" y1="25.248" x2="66.04" y2="30.8571" width="1.016" layer="16"/>
-<wire x1="66.04" y1="30.8571" x2="66.04" y2="35.56" width="1.016" layer="16"/>
+<wire x1="71.6491" y1="22.327" x2="66.04" y2="27.9361" width="1.016" layer="16"/>
+<wire x1="66.04" y1="27.9361" x2="66.04" y2="35.56" width="1.016" layer="16"/>
 </signal>
 <signal name="N$4">
 <contactref element="R81" pad="P$1"/>
@@ -1142,8 +1141,8 @@ design rules under a new name.</description>
 <signal name="SENSM_24V">
 <contactref element="R11" pad="P$1"/>
 <contactref element="X7" pad="2"/>
-<wire x1="66.5691" y1="25.248" x2="61.595" y2="30.2221" width="1.016" layer="16"/>
-<wire x1="61.595" y1="30.2221" x2="61.595" y2="35.56" width="1.016" layer="16"/>
+<wire x1="66.5691" y1="22.327" x2="61.595" y2="27.3011" width="1.016" layer="16"/>
+<wire x1="61.595" y1="27.3011" x2="61.595" y2="35.56" width="1.016" layer="16"/>
 </signal>
 <signal name="SENSM_5V">
 <contactref element="R11" pad="P$2"/>
@@ -1156,8 +1155,8 @@ design rules under a new name.</description>
 <signal name="SENSA_24V">
 <contactref element="R13" pad="P$1"/>
 <contactref element="X7" pad="3"/>
-<wire x1="61.4891" y1="25.248" x2="57.15" y2="29.5871" width="1.016" layer="16"/>
-<wire x1="57.15" y1="29.5871" x2="57.15" y2="35.56" width="1.016" layer="16"/>
+<wire x1="61.4891" y1="22.327" x2="57.15" y2="26.6661" width="1.016" layer="16"/>
+<wire x1="57.15" y1="26.6661" x2="57.15" y2="35.56" width="1.016" layer="16"/>
 </signal>
 <signal name="SENSA_5V">
 <contactref element="R13" pad="P$2"/>
@@ -1170,14 +1169,14 @@ design rules under a new name.</description>
 <signal name="SENSINDU_24V">
 <contactref element="R51" pad="P$1"/>
 <contactref element="X7" pad="4"/>
-<wire x1="56.4091" y1="25.248" x2="52.705" y2="28.9521" width="1.016" layer="16"/>
-<wire x1="52.705" y1="28.9521" x2="52.705" y2="35.56" width="1.016" layer="16"/>
+<wire x1="56.4091" y1="22.327" x2="52.705" y2="26.0311" width="1.016" layer="16"/>
+<wire x1="52.705" y1="26.0311" x2="52.705" y2="35.56" width="1.016" layer="16"/>
 </signal>
 <signal name="SENSPIST1A_24V">
 <contactref element="R53" pad="P$1"/>
 <contactref element="X6" pad="1"/>
-<wire x1="51.3291" y1="25.248" x2="48.26" y2="28.3171" width="1.016" layer="16"/>
-<wire x1="48.26" y1="28.3171" x2="48.26" y2="35.56" width="1.016" layer="16"/>
+<wire x1="51.3291" y1="22.327" x2="48.26" y2="25.3961" width="1.016" layer="16"/>
+<wire x1="48.26" y1="25.3961" x2="48.26" y2="35.56" width="1.016" layer="16"/>
 </signal>
 <signal name="SENSPIST1A_5V">
 <contactref element="R53" pad="P$2"/>
@@ -1191,8 +1190,8 @@ design rules under a new name.</description>
 <signal name="SENSPIST2A_24V">
 <contactref element="R55" pad="P$1"/>
 <contactref element="X6" pad="2"/>
-<wire x1="46.2491" y1="25.248" x2="43.815" y2="27.6821" width="1.016" layer="16"/>
-<wire x1="43.815" y1="27.6821" x2="43.815" y2="35.56" width="1.016" layer="16"/>
+<wire x1="46.2491" y1="22.327" x2="43.815" y2="24.7611" width="1.016" layer="16"/>
+<wire x1="43.815" y1="24.7611" x2="43.815" y2="35.56" width="1.016" layer="16"/>
 </signal>
 <signal name="SENSPIST2A_5V">
 <contactref element="R55" pad="P$2"/>
@@ -1207,8 +1206,8 @@ design rules under a new name.</description>
 <signal name="SENSPIST3A_24V">
 <contactref element="R57" pad="P$1"/>
 <contactref element="X6" pad="3"/>
-<wire x1="41.1691" y1="25.248" x2="39.37" y2="27.0471" width="1.016" layer="16"/>
-<wire x1="39.37" y1="27.0471" x2="39.37" y2="35.56" width="1.016" layer="16"/>
+<wire x1="41.1691" y1="22.327" x2="39.37" y2="24.1261" width="1.016" layer="16"/>
+<wire x1="39.37" y1="24.1261" x2="39.37" y2="35.56" width="1.016" layer="16"/>
 </signal>
 <signal name="SENSPIST3A_5V">
 <contactref element="R57" pad="P$2"/>
@@ -1222,8 +1221,8 @@ design rules under a new name.</description>
 <signal name="CORA_24V">
 <contactref element="R59" pad="P$1"/>
 <contactref element="X6" pad="4"/>
-<wire x1="36.0891" y1="25.248" x2="34.925" y2="26.4121" width="1.016" layer="16"/>
-<wire x1="34.925" y1="26.4121" x2="34.925" y2="35.56" width="1.016" layer="16"/>
+<wire x1="36.0891" y1="22.327" x2="34.925" y2="23.4911" width="1.016" layer="16"/>
+<wire x1="34.925" y1="23.4911" x2="34.925" y2="35.56" width="1.016" layer="16"/>
 </signal>
 <signal name="CORA_5V">
 <contactref element="R59" pad="P$2"/>
@@ -1237,7 +1236,7 @@ design rules under a new name.</description>
 <contactref element="R61" pad="P$1"/>
 <contactref element="X6" pad="5"/>
 <wire x1="30.48" y1="35.56" x2="31.0091" y2="35.0309" width="1.016" layer="16"/>
-<wire x1="31.0091" y1="35.0309" x2="31.0091" y2="25.248" width="1.016" layer="16"/>
+<wire x1="31.0091" y1="35.0309" x2="31.0091" y2="22.327" width="1.016" layer="16"/>
 </signal>
 <signal name="CORG_5V">
 <contactref element="R61" pad="P$2"/>
@@ -1249,8 +1248,8 @@ design rules under a new name.</description>
 <signal name="CORB_24V">
 <contactref element="R63" pad="P$1"/>
 <contactref element="X6" pad="6"/>
-<wire x1="26.035" y1="35.56" x2="26.035" y2="25.3539" width="1.016" layer="16"/>
-<wire x1="26.035" y1="25.3539" x2="25.9291" y2="25.248" width="1.016" layer="16"/>
+<wire x1="26.035" y1="35.56" x2="26.035" y2="22.4329" width="1.016" layer="16"/>
+<wire x1="26.035" y1="22.4329" x2="25.9291" y2="22.327" width="1.016" layer="16"/>
 </signal>
 <signal name="CORB_5V">
 <contactref element="R63" pad="P$2"/>
@@ -1265,8 +1264,8 @@ design rules under a new name.</description>
 <signal name="RAMP1_24V">
 <contactref element="R65" pad="P$1"/>
 <contactref element="X6" pad="7"/>
-<wire x1="21.59" y1="35.56" x2="21.59" y2="25.9889" width="1.016" layer="16"/>
-<wire x1="21.59" y1="25.9889" x2="20.8491" y2="25.248" width="1.016" layer="16"/>
+<wire x1="21.59" y1="35.56" x2="21.59" y2="23.0679" width="1.016" layer="16"/>
+<wire x1="21.59" y1="23.0679" x2="20.8491" y2="22.327" width="1.016" layer="16"/>
 </signal>
 <signal name="RAMP1_5V">
 <contactref element="R65" pad="P$2"/>
@@ -1281,8 +1280,8 @@ design rules under a new name.</description>
 <signal name="RAMP2_24V">
 <contactref element="R67" pad="P$1"/>
 <contactref element="X6" pad="8"/>
-<wire x1="17.145" y1="35.56" x2="17.145" y2="26.6239" width="1.016" layer="16"/>
-<wire x1="17.145" y1="26.6239" x2="15.7691" y2="25.248" width="1.016" layer="16"/>
+<wire x1="17.145" y1="35.56" x2="17.145" y2="23.7029" width="1.016" layer="16"/>
+<wire x1="17.145" y1="23.7029" x2="15.7691" y2="22.327" width="1.016" layer="16"/>
 </signal>
 <signal name="RAMP2_5V">
 <contactref element="R67" pad="P$2"/>
@@ -1298,11 +1297,11 @@ design rules under a new name.</description>
 <contactref element="R71" pad="P$1"/>
 <contactref element="X6" pad="10"/>
 <wire x1="52.578" y1="11.706975" x2="50.954825" y2="10.0838" width="1.016" layer="16"/>
-<wire x1="50.954825" y1="10.0838" x2="16.4592" y2="10.0838" width="1.016" layer="16"/>
-<wire x1="16.4592" y1="10.0838" x2="6.223" y2="20.32" width="1.016" layer="16"/>
-<wire x1="6.223" y1="20.32" x2="5.842" y2="20.701" width="1.016" layer="16"/>
-<wire x1="5.6091" y1="25.248" x2="5.6091" y2="20.9339" width="1.016" layer="16"/>
-<wire x1="5.6091" y1="20.9339" x2="6.223" y2="20.32" width="1.016" layer="16"/>
+<wire x1="50.954825" y1="10.0838" x2="13.5382" y2="10.0838" width="1.016" layer="16"/>
+<wire x1="13.5382" y1="10.0838" x2="6.223" y2="17.399" width="1.016" layer="16"/>
+<wire x1="6.223" y1="17.399" x2="5.842" y2="17.78" width="1.016" layer="16"/>
+<wire x1="5.6091" y1="22.327" x2="5.6091" y2="18.0129" width="1.016" layer="16"/>
+<wire x1="5.6091" y1="18.0129" x2="6.223" y2="17.399" width="1.016" layer="16"/>
 <wire x1="52.578" y1="13.589" x2="52.578" y2="11.706975" width="1.016" layer="16"/>
 </signal>
 <signal name="ENCODER_5V">
@@ -1390,8 +1389,8 @@ design rules under a new name.</description>
 <signal name="RAMP3_24V">
 <contactref element="R69" pad="P$1"/>
 <contactref element="X6" pad="9"/>
-<wire x1="48.133" y1="13.589" x2="22.3481" y2="13.589" width="1.016" layer="16"/>
-<wire x1="22.3481" y1="13.589" x2="10.6891" y2="25.248" width="1.016" layer="16"/>
+<wire x1="48.133" y1="13.589" x2="19.4271" y2="13.589" width="1.016" layer="16"/>
+<wire x1="19.4271" y1="13.589" x2="10.6891" y2="22.327" width="1.016" layer="16"/>
 </signal>
 </signals>
 <mfgpreviewcolors>
