@@ -17,16 +17,46 @@
 #define ramp2 13        //Borneira 6
 #define ramp3 A0        //Borneira 7
 #define encoder A1      //Borneira 23
+#define botEsteira 1    //Botão para ligar/desligar a esteira
 
-//#define endEsteira    //Borneira 13
 //Saída
 
-#define pist1A A2       //Borneira 4
-#define pist1R A3       //Borneira 3
+#define pist1A A3       //Borneira 4
+#define pist1R A2       //Borneira 3
 #define pist2 A4        //Borneira 2
 #define pist3 A5        //Borneira 1
 
+int contGeralPecas;   //Contador geral de todas as peças que passaram pelos sensores presentes na descida da rampa
+
+const int limiteGeralPecas = 20;
+
+int buff[3][3] = {{2,1, 2}, {2, 1,1}, {3, 3, 3}}; // Buffer das posições que precisam ser preenchidas
+int contadorRampa1 = 0;
+int contadorRampa2 = 0;
+int contadorRampa3 = 0;
+
+bool resetar;        //Estado de reset do sistema
+int i = 0;
+
+
+int pecaAtual;
+//cores corUltimaPecaSelecionada;
+
+
+int contGeralPeca = 0;
+int contB = 0 ;
+int contM = 0 ;
+int contA = 0 ;
+
+int contRampa = 0;
+int contPos = 0;
+
+
+
+
 void setup() {
+  Serial.begin(9600);
+  pinMode (sensM, INPUT);
   pinMode (sensB, INPUT);
   pinMode (sensA, INPUT);
   pinMode (sensIndu, INPUT);
@@ -40,20 +70,118 @@ void setup() {
   pinMode (ramp2, INPUT);
   pinMode (ramp3, INPUT);
   pinMode (encoder, INPUT);
-  //pinMode (corA, INPUT);
-  //pinMode (corG, INPUT);
-  //pinMode (corB, INPUT);
-  //pinMode (endEsteira, INPUT);
-  
+  pinMode (corA, INPUT);
+  pinMode (corG, INPUT);
+  pinMode (corB, INPUT);
 
   pinMode (pist1A, OUTPUT);
   pinMode (pist1R, OUTPUT);
   pinMode (pist2, OUTPUT);
   pinMode (pist3, OUTPUT);
+  pinMode (botEsteira, OUTPUT);
+
+  digitalWrite(pist1A, HIGH);
+  digitalWrite(pist1R, HIGH);
+  digitalWrite(pist2, HIGH);
+  digitalWrite(pist3, HIGH);
+
+
+
+
 
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
+void loop()
+{
+ int leSensB;
+ int leSensM;
+ int leSensA;
+ leSensB = digitalRead(sensB);
+ pecaAtual=0;
+  if (leSensB == HIGH)
+  { //Levando em conta que este Opto, está associado com as cores amarela e azul (detectadas igualmente pelo sensor)
+    while(leSensB == HIGH){ Serial.println("SensB"); delay(1); leSensB = digitalRead(sensB); }
+    pecaAtual++;
+    i=0;
+    while (i < 100 && pecaAtual == 1)
+    {
+      leSensM = digitalRead(sensM);
+      if (leSensM == HIGH)
+      {
+        while(leSensM == HIGH){ Serial.println("SensM"); delay(1); leSensM = digitalRead(sensM); }
+        pecaAtual++;
+      }
+      delay(10);
+      i++;
+    }
+    i = 0;
+    while (i < 100 && pecaAtual == 2)
+    {
+      leSensA = digitalRead(sensA);
+      if (leSensA == HIGH)
+      {
+        while(leSensA == HIGH){ Serial.println("SensA"); delay(1); leSensA = digitalRead(sensA);  }
+        pecaAtual++;
+      }
+      delay(10);
+      i++;
+    }
+    i = 0;
+    contGeralPeca++;
+  }
 
+  if (pecaAtual != 0 && contGeralPeca < 9)
+  {
+
+    if (buff[0][contadorRampa1] == pecaAtual)
+    {
+      digitalWrite(pist1A, HIGH);
+      digitalWrite(pist1R, LOW);
+      while (!(digitalRead(ramp1)) || !(digitalRead(ramp2)) || !(digitalRead(ramp3)) )
+      {
+        
+      }
+        contadorRampa1++;
+        digitalWrite(pist1A, LOW);
+        digitalWrite(pist1R, HIGH);
+        pecaAtual = 0;
+      
+    }
+
+    if (buff[1][contadorRampa2] == pecaAtual)
+    {
+      digitalWrite(pist2, HIGH);
+      while (!(digitalRead(ramp1)) || !(digitalRead(ramp2)) || !(digitalRead(ramp3)) )
+      {
+       
+      }
+        contadorRampa2++;
+        digitalWrite(pist2, LOW);
+        pecaAtual = 0;
+      
+    }
+
+Serial.println(pecaAtual);
+    if (buff[2][contadorRampa3] == pecaAtual)
+    {
+      digitalWrite(pist3, HIGH);
+      while (!(digitalRead(ramp1)) || !(digitalRead(ramp2)) || !(digitalRead(ramp3)) )
+      {
+       
+      }
+        contadorRampa3++;
+        digitalWrite(pist3, LOW);
+        pecaAtual = 0;
+      
+    }
+
+
+  }
+  else {
+    digitalWrite(pist1A, LOW);
+    digitalWrite(pist1R, HIGH);
+    digitalWrite(pist2, HIGH);
+    digitalWrite(pist3, HIGH);
+  }
 }
+
